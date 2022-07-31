@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Code Editor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="editor.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Rigan Code Editor (HTML, CSS & JS)</h1>
+    </div>
+    <div class="container">
+      <textarea id="html" placeholder="HTML"></textarea>
+      <textarea id="css" placeholder="CSS"></textarea>
+      <textarea id="js" placeholder="JavaScript"></textarea>
+    </div>
+    <div class="container">
+      <span class="h1">Result: <span style="font-size:20px;">(Result displays automatically below; does not support Mozilla Firefox)</span></span>
+      <button id="run">Run &gt;&gt;</button>
+    </div>
+    <div class="container"></div>
+    <iframe id="code"></iframe>
+
+    <script type="text/javascript" src="editor.js"></script>
+  </body>
+</html>
