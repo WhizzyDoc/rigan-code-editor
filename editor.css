@@ -45,6 +45,11 @@ textarea {
   margin-bottom: 8px;
 }
 
+textarea::placeholder {
+  font-size: 30px;
+  text-align: center;
+}
+
 iframe {
   bottom: 0;
   position: relative;
