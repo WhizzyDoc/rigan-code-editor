@@ -4,6 +4,21 @@ var html = document.getElementById("html");
   var runCode = document.getElementById("run");
   var code = document.getElementById("code").contentWindow.document;
 
+
+  //For syntax autocomplete
+  html.onkeyup = function() {
+      var lines = html.value.split('\n');
+      for(var i=0; i<lines.length; i++){
+        
+    
+        var check = lines.match(/<h1>/);
+        if(check) {
+          html.value = lines + '</h1>';
+        }
+      }
+    }
+  
+//For code compilation into browser
   runCode.onclick = function() {
     code.open();
     code.writeln(
@@ -33,3 +48,8 @@ var html = document.getElementById("html");
 
 
 compile();
+
+
+if(html.value.includes("<html>") === true) {
+
+}
