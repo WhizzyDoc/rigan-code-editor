@@ -1,71 +1,89 @@
 body {
   text-align: center;
-  background: black;
+  background: #222;
 }
 
-@media only screen and (max-width: 600px) {
-    textarea {
-      min-width: 100%;
-      margin-bottom: 8px;
-   }
-  }
-  
-  @media only screen and (max-width: 768px) {
-    textarea {
-      min-width: 45%;
-      margin-bottom: 8px;
-    } 
-  }
 
-  @media only screen and (min-width:769px) {
-    textarea {
-      min-width: 32%;
-    }
-  }
 
 .container {
   width:100%;
-  padding: 10px;
+  position: relative;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
+  padding: 10px;
   align-items: center;
+  background: black;
+}
+
+.editor {
+  display: inline-flex;
+  gap: 10px;
+  font-family: monospace;
+  line-height: 25px;
+  background: #222;
+  border-radius: 2px;
+  padding: 20px 10px;
+  min-width: 100%;
+  font-size: 15px;
 }
 
 textarea {
-  min-height: 250px;
-  position: relative;
-  overflow: scroll;
-  margin: auto;
-  display: inline-block;
-  background: #f4f4f9;
+  line-height: 25px;
+  padding: 0;
+  font-size: 15px;
+  padding-left: 10px;
+  border: 0;
+  background: #222;
+  width: 95%;
+  color: #FFF;
   outline: none;
-  font-family: Courier, sans-serif;
-  font-size: 14px;
-  margin-bottom: 8px;
+  resize: none;
+  border-right: 1px solid grey;
+  position: relative;
 }
 
 textarea::placeholder {
   font-size: 30px;
   text-align: center;
 }
+.line-numbers, .line-numbers1, .line-numbers2 {
+  min-width: 5%;
+  text-align: right;
+}
+
+.line-numbers span, .line-numbers1 span, .line-numbers2 span {
+  counter-increment: linenumber;
+  display: block;
+}
+
+.line-numbers span::before, .line-numbers1 span::before, .line-numbers2 span::before {
+  content: counter(linenumber);
+  display: block;
+  color: #506882;
+}
 
 iframe {
   bottom: 0;
   position: relative;
   width: 100%;
-  height: 35em;
+  height: 100vh;
   border: none;
   background: white;
 }
 
 button {
-  padding: 8px 16px;
-  font-size: 20px;
+  padding: 8px;
+  font-size: 15px;
   outline: none;
   border: none;
   background: green;
   color:white;
+  cursor:pointer;
+  margin: 0 10px 5px 10px;
+}
+#showHtml {
+  background: red;
 }
 
 button a {
@@ -79,11 +97,21 @@ button a {
   font-size: 30px;
   font-weight: 600;
 }
-h1 {
+h3 {
   color:white;
   font-weight:600;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
-button {
-  display:none;
+
+#result {
+  display: none;
+}
+#header {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index:1;
+}
+#css1, #js1 {
+  display: none;
 }

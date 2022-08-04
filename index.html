@@ -7,21 +7,48 @@
   </head>
 
   <body>
-    <div class="container">
-      <h1>Rigan Code Editor (HTML, CSS & JS)</h1>
+    <div class="container" id="header">
+      <h3>Rigan Code Editor</h3>
+      <div>
+      <button id="showHtml">HTML</button>
+      <button id="showCss">CSS</button>
+      <button id="showJs">JS</button>
+      <button id="showResult">Show Result</button>
+      </div>
     </div>
-    <div class="container">
-      <textarea id="html" placeholder="HTML" spellcheck="false"></textarea>
-      <textarea id="css" placeholder="CSS" spellcheck="false"></textarea>
-      <textarea id="js" placeholder="JavaScript" spellcheck="false"></textarea>
+   
+    <div id="editor">
+
+      <div class="editor" id="html1">
+        <div class="line-numbers">
+          <span></span>
+        </div>
+        <textarea id="html" placeholder="HTML" spellcheck="false"></textarea>
+      </div>
+      <div class="editor" id="css1">
+        <div class="line-numbers1">
+          <span></span>
+        </div>
+        <textarea id="css" placeholder="CSS" spellcheck="false"></textarea>
+      </div>
+
+      <div class="editor" id="js1">
+        <div class="line-numbers2">
+          <span></span>
+        </div>
+        <textarea id="js" placeholder="JavaScript" spellcheck="false"></textarea>
+      </div>
+
     </div>
-    <div class="container">
-      <span class="h1">Result: <span style="font-size:20px;">(Result displays automatically below; does not support Mozilla Firefox)</span></span>
-      <button id="run">Run &gt;&gt;</button>
+    
+
+    <div id="result">
+     
+      <div class="container"></div>
+      <iframe id="code"></iframe>
     </div>
-    <div class="container"></div>
-    <iframe id="code"></iframe>
 
     <script type="text/javascript" src="editor.js"></script>
+    <script type="text/javascript" src="a.js"></script>
   </body>
 </html>
