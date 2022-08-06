@@ -2,18 +2,93 @@
   <head>
     <title> Rigan Code Editor</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
     <link rel="stylesheet" href="editor.css" />
   </head>
 
-  <body>
+  <body onload="lastMem();">
+
+    <div class="about" id="about">
+      <h1>{Rigan Editor}</h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>Software Type</td>
+            <td>Code Editor</td>
+          </tr>
+          <tr>
+            <td>Developed with</td>
+            <td>JavaScript</td>
+          </tr>
+          <tr>
+            <td>Developed by</td>
+            <td>Rigan Tech I.T Solutions</td>
+          </tr>
+          <tr>
+            <td>Supported Language</td>
+            <td>HTML, CSS & JavaScript</td>
+          </tr>
+          <tr>
+            <td>Supported Devices</td>
+            <td>Android, iOS, PC</td>
+          </tr>
+          <tr>
+            <td>Version</td>
+            <td>22.8.1</td>
+          </tr>
+        </tbody>
+      </table>
+      <button id="ok" onclick="hideAbout()">Close</button>
+      
+    </div>
+
+
+    <div class="manual" id="manual">
+      <h3>Features of Rigan Editor:</h3>
+      <ul>
+        <li>A dark theme Code Editor for HTML, CSS & JavaScript</li>
+        <li>En Embedded Web Browser Simulation that shows the resukt of the codes</li>
+        <li>Line Numbering when writing codes</li>
+        <li>HotKeys Available at the bottom of Editor for Mobile/Tablet users to make coding easier</li>
+        <li>Side Navigation that contains tools such as downloads and general info</li>
+        <li>You can easily download your codes by simply clicking onappropriate buttons in the side menu</li>
+        <li>You can easily save your current state to avoid loss of codes when browser reloads or closes by simply clickin on the <b>&quot;Save current state&quot; button on side menu or pressing &quot;Ctrl+S&quot; on your keyboard</b></li>
+        <li>Contain some keyboard shortcut keys that helps navigation easier</li>
+      </ul>
+      <button id="ok" onclick="hideManual()">Close</button>
+    </div>
+
+
+    <div class="save" id="save">
+      <h1>Save Current State</h1>
+      <p>Are you sure you want to save current state? You will be redirected to this particular stage when next you open your browser.</p>
+      <button id="ok" onclick="hideSave()">No, don't save</button>
+      <button id="no" onclick="save()">Yes, save it</button>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <h3>{Rigan Editor}</h3>
+  
+      <div style="width:100%;background:red;color:white;text-align:center;padding:10px;margin-bottom:5px;" class="h3">Download Code <i class="fa fa-download"></i></div>
+        <button id="downloadHTML">HTML</button>
+        <button id="downloadCSS">CSS</button>
+        <button id="downloadJS">JavaScript</button>
+      <div style="width:100%;background:red;color:white;text-align:center;padding:10px;margin-bottom:5px;" class="h3">Navigation <i class="fa fa-map-marker"></i></div>
+        <button onclick="about()">About (Ctrl+R)</button>
+        <button onclick="manual()">User Manual (Ctrl+M)</button>
+        <button onclick="showSave()">Save Current Mode (Ctrl+S)</button>
+      
+    </div>
+
     <div class="container" id="header">
-      <h3>{Rigan}</h3>
+        <div style="color:white;font-size:20px;margin-right:10px;" onclick="openNav()"><i class="fa fa-list"></i>&times</div> 
+   
       <div>
-      <button id="showHtml">HTML</button>
-      <button id="showCss">CSS</button>
-      <button id="showJs">JS</button>
-      <button id="showResult">Show Result</button>
+        <button id="showHtml">HTML</button>
+        <button id="showCss">CSS</button>
+        <button id="showJs">JS</button>
+        <button id="showResult">Result</button>
       </div>
     </div>
    
@@ -215,5 +290,6 @@
     <script type="text/javascript" src="editor.js"></script>
     <script type="text/javascript" src="a.js"></script>
     <script type="text/javascript" src="short.js"></script>
+    <script type="text/javascript" src="nav.js"></script>
   </body>
 </html>
