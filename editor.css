@@ -21,10 +21,10 @@ body {
 
 /* The navigation menu links */
 .sidenav a {
-  padding: 8px 8px 8px 32px;
+  padding: 10px;
   text-decoration: none;
-  font-size: 25px;
-  color: #818181;
+  font-size: 17px;
+  color: white;
   display: block;
   transition: 0.3s;
 }
@@ -35,7 +35,7 @@ body {
   width: 100%;
   position: relative;
   background:transparent;
-  font-size: 20px;
+  font-size: 17px;
   color: white;
   display: block;
   transition: 0.3s;
@@ -47,8 +47,10 @@ body {
 }
 
 /* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-  color: #f1f1f1;
+.sidenav a {
+  text-decoration: none;
+  outline: none;
+  display: block;
 }
 
 /* Position and style the close button (top right corner) */
