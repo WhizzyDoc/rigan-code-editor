@@ -46,7 +46,7 @@ function openNav() {
 
 function about() {
     document.getElementById("about").style.display = "block";
-    document.getElementById("mySidenav").style.display = "none";
+    document.getElementById("mySidenav").style.width = "0px";
 }
 function hideAbout() {
     document.getElementById("about").style.display = "none";
@@ -61,7 +61,7 @@ document.addEventListener('keydown', (e)  => {
 
 function manual() {
     document.getElementById("manual").style.display = "block";
-    document.getElementById("mySidenav").style.display = "none";
+    document.getElementById("mySidenav").style.width = "0px";
 }
 function hideManual() {
     document.getElementById("manual").style.display = "none";
@@ -76,7 +76,7 @@ document.addEventListener('keydown', (e)  => {
 
 function showSave() {
     document.getElementById("save").style.display = "block";
-    document.getElementById("mySidenav").style.display = "none";
+    document.getElementById("mySidenav").style.width = "0px";
 }
 function hideSave() {
     document.getElementById("save").style.display = "none";
